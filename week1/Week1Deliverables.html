@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Methods Deliverables</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px;
+    }
+
+    .container {
+      background: #ffffff;
+      color: #2c3e50;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      width: 600px;
+      max-width: 95%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #6a11cb;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 2px solid #6a11cb;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      flex: 1;
+      min-width: 120px;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      margin-top: 10px;
+      color: #2575fc;
+    }
+
+    .result {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 10px;
+      color: #333;
+      min-height: 40px;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Array Methods</h1>
+
+    <label for="userArray">Enter numbers (comma separated):</label>
+    <input type="text" id="userArray" placeholder="e.g. 2, 5, 8, 12, 20">
+
+    <div class="button-group">
+      <button onclick="showOriginal()">Show Original</button>
+      <button onclick="applyMap()">map()</button>
+      <button onclick="applyFilter()">filter()</button>
+      <button onclick="applyReduce()">reduce()</button>
+      <button onclick="applyForEach()">forEach()</button>
+    </div>
+
+    <h2>Output</h2>
+    <div id="output" class="result"></div>
+  </div>
+
+  <script>
+    function getArray() {
+      const input = document.getElementById("userArray").value;
+      return input.split(",").map(num => Number(num.trim())).filter(num => !isNaN(num));
+    }
+
+    function showOriginal() {
+      const arr = getArray();
+      document.getElementById("output").innerText = "Original Array: " + arr.join(", ");
+    }
+
+    function applyMap() {
+      const arr = getArray();
+      const result = arr.map(num => num * 2);
+      document.getElementById("output").innerText = "map() Result (doubled): " + result.join(", ");
+    }
+
+    function applyFilter() {
+      const arr = getArray();
+      const operator = prompt("Enter condition operator: >, <, >=, <=, =");
+      const value = Number(prompt("Enter value to compare:"));
+      let result;
+
+      switch (operator) {
+        case ">": result = arr.filter(num => num > value); break;
+        case "<": result = arr.filter(num => num < value); break;
+        case ">=": result = arr.filter(num => num >= value); break;
+        case "<=": result = arr.filter(num => num <= value); break;
+        case "=": result = arr.filter(num => num === value); break;
+        default: alert("Invalid operator!"); return;
+      }
+
+      document.getElementById("output").innerText = `filter() Result (${operator} ${value}): ${result.join(", ")}`;
+    }
+
+    function applyReduce() {
+      const arr = getArray();
+      const sum = arr.reduce((acc, num) => acc + num, 0);
+      document.getElementById("output").innerText = "reduce() Result (sum): " + sum;
+    }
+
+    function applyForEach() {
+      const arr = getArray();
+      let sentence = "";
+      arr.forEach(num => {
+        sentence += num + " is a number. ";
+      });
+      document.getElementById("output").innerText = "forEach() Result: " + sentence;
+    }
+  </script>
+</body>
+</html>
