@@ -5,106 +5,33 @@
   <title>Array Methods Deliverables</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
     }
 
     .container {
-      background: #ffffff;
-      color: #2c3e50;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-      width: 600px;
-      max-width: 95%;
-    }
-
-    h1 {
+      max-width: 600px;
+      width: 90%;
       text-align: center;
-      margin-bottom: 20px;
-      color: #6a11cb;
     }
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 2px solid #6a11cb;
-      margin-bottom: 20px;
+    input, button, a {
+      margin: 8px 0;
+      padding: 8px 12px;
       font-size: 14px;
     }
 
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    button {
-      flex: 1;
-      min-width: 120px;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #ff512f, #dd2476);
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    h2 {
-      margin-top: 10px;
-      color: #2575fc;
-    }
-
-    .result {
-      background: #f4f4f4;
-      padding: 15px;
-      border-radius: 10px;
-      color: #333;
+    #output {
+      margin-top: 15px;
+      padding: 10px;
+      border: 1px solid #000;
       min-height: 40px;
-      font-size: 15px;
     }
-    /* Week 2 button */
-    .week2-btn {
-      display: block;
-      text-align: center;
-      margin-top: 30px;
-      padding: 15px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #00b09b, #96c93d);
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .week2-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
   </style>
 </head>
 <body>
@@ -114,7 +41,7 @@
     <label for="userArray">Enter numbers (comma separated):</label>
     <input type="text" id="userArray" placeholder="e.g. 2, 5, 8, 12, 20">
 
-    <div class="button-group">
+    <div>
       <button onclick="showOriginal()">Show Original</button>
       <button onclick="applyMap()">map()</button>
       <button onclick="applyFilter()">filter()</button>
@@ -123,13 +50,9 @@
     </div>
 
     <h2>Output</h2>
-    <div id="output" class="result"></div>
+    <div id="output"></div>
 
-     <!-- Week 2 Button -->
-    <a href="../Week2/index.html" class="week2-btn">Click to Week 2</a>
-  </div>
-  </div>
-
+   
   <script>
     function getArray() {
       const input = document.getElementById("userArray").value;
