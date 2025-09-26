@@ -1,0 +1,12 @@
+// Import SCSS partials
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'home';
+@import 'footer';
+
+// Global Styles
+body {
+  margin: 0;
+  font-family: $font-stack;
+}
