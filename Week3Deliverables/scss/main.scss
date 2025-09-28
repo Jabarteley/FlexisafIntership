@@ -1,12 +1,15 @@
-// Import SCSS partials
+// Import all partials (Preprocessing in action)
 @import 'variables';
 @import 'mixins';
 @import 'header';
 @import 'home';
+@import 'buttons';
 @import 'footer';
+@import 'utilities';
 
 // Global Styles
 body {
   margin: 0;
   font-family: $font-stack;
+  background: lighten($primary-color, 40%); // Operators + function
 }

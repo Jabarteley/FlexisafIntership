@@ -1,0 +1,19 @@
+.home {
+  text-align: center;
+  padding: $base-spacing * 3; // Operators in action
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $text-color;
+    margin-bottom: $base-spacing;
+  }
+
+  @include respond(mobile) {
+    padding: $base-spacing; // Responsive with mixin
+  }
+}

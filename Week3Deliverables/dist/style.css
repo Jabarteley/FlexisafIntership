@@ -1,6 +1,6 @@
 header {
   background: #1e90ff;
-  padding: 1rem;
+  padding: 16px;
 }
 header nav {
   display: flex;
@@ -27,7 +27,7 @@ header nav ul li a:hover {
 
 .home {
   text-align: center;
-  padding: 3rem;
+  padding: 48px;
 }
 .home h2 {
   font-size: 2rem;
@@ -36,23 +36,41 @@ header nav ul li a:hover {
 .home p {
   font-size: 1.2rem;
   color: #333;
+  margin-bottom: 16px;
 }
-.home .btn-primary {
-  background: #ff7f50;
-  border: none;
+@media (max-width: 768px) {
+  .home {
+    padding: 16px;
+  }
+}
+
+.btn, .btn-secondary, .btn-primary {
   padding: 0.8rem 1.5rem;
-  color: white;
+  border: none;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
-.home .btn-primary:hover {
+
+.btn-primary {
+  background: #ff7f50;
+  color: white;
+}
+.btn-primary:hover {
   background: rgb(255, 89.6971428571, 29);
+}
+
+.btn-secondary {
+  background: rgb(81, 169.16, 255);
+  color: white;
+}
+.btn-secondary:hover {
+  background: #1e90ff;
 }
 
 footer {
   background: #1e90ff;
-  padding: 1rem;
+  padding: 16px;
   text-align: center;
 }
 footer p {
@@ -60,9 +78,15 @@ footer p {
   font-family: "Poppins", sans-serif;
 }
 
+.container {
+  width: 80%;
+  margin: 32px auto;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background: rgb(234, 244.64, 255);
 }
 
 /*# sourceMappingURL=style.css.map */

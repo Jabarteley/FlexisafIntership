@@ -1,0 +1,30 @@
+// Base button (parent class)
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+// Primary button (extends .btn)
+.btn-primary {
+  @extend .btn;
+  background: $secondary-color;
+  color: white;
+
+  &:hover {
+    background: darken($secondary-color, 10%);
+  }
+}
+
+// Secondary button (extends .btn)
+.btn-secondary {
+  @extend .btn;
+  background: lighten($primary-color, 10%);
+  color: white;
+
+  &:hover {
+    background: $primary-color;
+  }
+}
