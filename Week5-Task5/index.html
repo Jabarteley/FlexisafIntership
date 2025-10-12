@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node.js and npm Basics</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Understanding Node.js and npm</h1>
+    <p>By Abduljabar</p>
+  </header>
+
+  <section>
+    <h2>What is Node.js?</h2>
+    <p>
+      Node.js is a JavaScript runtime built on Chrome's V8 engine that lets you run JavaScript outside the browser. 
+      It’s commonly used to build backend servers and APIs.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is npm or yarn?</h2>
+    <p>
+      npm (Node Package Manager) and Yarn are tools used to install, manage, and share JavaScript packages and dependencies for Node.js projects.
+    </p>
+  </section>
+
+  <section>
+    <h2>Basic npm Commands</h2>
+    <ul>
+      <li><code>npm init -y</code> — Initialize a new Node.js project</li>
+      <li><code>npm install express</code> — Install a package</li>
+      <li><code>npm start</code> — Run your app (if defined in package.json)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Practice Example</h2>
+    <pre>
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => res.send('Hello Node.js!'));
+app.listen(3000, () => console.log('Server running on port 3000'));
+    </pre>
+  </section>
+<section>
+  <h2>Did You Know?</h2>
+  <p id="fact"></p>
+</section>
+
+<script src="script.js"></script>
+  <footer>
+    <p>Learning Outcome: I learned how to set up Node.js, use npm commands, and understand package management.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h1, h2 {
+  color: #0066cc;
+}
+code {
+  background: #74a4d8;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+pre {
+  background: #bababa;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+footer {
+  margin-top: 30px;
+  font-style: italic;
+  text-align: center;
+}
