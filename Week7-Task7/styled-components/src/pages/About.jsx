@@ -49,9 +49,9 @@ export default function About() {
     <Wrapper>
       <Content>
         <Section>
-          <h1>About StyledShop</h1>
+          <h1>About TechShop</h1>
           <p>
-            StyledShop is a modern e-commerce platform built with React and styled-components.
+            TechShop is a modern e-commerce platform built with React and styled-components.
             We specialize in offering technology products with a focus on design, quality, and user experience.
           </p>
         </Section>
@@ -68,7 +68,7 @@ export default function About() {
         <Section>
           <h2>Our Story</h2>
           <p>
-            Founded in 2025, StyledShop began as a small project to demonstrate the power 
+            Founded in 2024, StyledShop began as a small project to demonstrate the power 
             of styled-components in React applications. Today, we've grown into a comprehensive 
             e-commerce platform featuring hundreds of products across multiple categories.
           </p>
@@ -103,7 +103,7 @@ export default function About() {
         <Section>
           <h2>Our Technology</h2>
           <p>
-            StyledShop is built using modern web technologies including React, 
+            TechShop is built using modern web technologies including React, 
             styled-components for dynamic styling, React Router for navigation, 
             and various other libraries to ensure a robust and performant 
             application.

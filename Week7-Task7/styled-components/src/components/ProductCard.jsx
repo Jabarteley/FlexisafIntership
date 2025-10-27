@@ -53,7 +53,7 @@ export default function ProductCard({ product, onClick }) {
     <Card onClick={() => onClick(product)}>
       <Image src={product.img} alt={product.name} />
       <Name>{product.name}</Name>
-      <Price>${product.price}</Price>
+      <Price>#{product.price}</Price>
     </Card>
   );
 }

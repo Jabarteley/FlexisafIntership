@@ -84,7 +84,7 @@ export default function Header({ toggleTheme, isDark }) {
 
   return (
     <Nav>
-      <Logo>🛍️ StyledShop</Logo>
+      <Logo>🛍️ TechShop</Logo>
       <Links $isOpen={isOpen}>
         <StyledLink to="/" onClick={() => window.innerWidth <= 768 && setIsOpen(false)}>Home</StyledLink>
         <StyledLink to="/products" onClick={() => window.innerWidth <= 768 && setIsOpen(false)}>Products</StyledLink>

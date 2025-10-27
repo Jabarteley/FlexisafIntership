@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <Wrapper>
       <HeroSection>
-        <h1>Welcome to StyledShop 🛒</h1>
+        <h1>Welcome to TechShop 🛒</h1>
         <p>Explore our modern products and experience styled-components in action.</p>
       </HeroSection>
       
@@ -54,7 +54,7 @@ export default function Home() {
           <FeatureCard>
             <FeatureIcon>🚚</FeatureIcon>
             <h3>Free Shipping</h3>
-            <p>Free worldwide shipping on all orders over $50</p>
+            <p>Free worldwide shipping on all orders over #50000</p>
           </FeatureCard>
           <FeatureCard>
             <FeatureIcon>🔒</FeatureIcon>
@@ -68,9 +68,9 @@ export default function Home() {
           </FeatureCard>
         </Features>
         
-        <h2>Why Choose StyledShop?</h2>
+        <h2>Why Choose TechShop?</h2>
         <p>
-          At StyledShop, we offer high-quality products with cutting-edge technology 
+          At TechShop, we offer high-quality products with cutting-edge technology 
           and contemporary design. Our mission is to provide an exceptional shopping 
           experience with top-notch customer service and fast delivery.
         </p>
