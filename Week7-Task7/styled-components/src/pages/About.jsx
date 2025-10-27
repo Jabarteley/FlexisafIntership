@@ -68,7 +68,7 @@ export default function About() {
         <Section>
           <h2>Our Story</h2>
           <p>
-            Founded in 2023, StyledShop began as a small project to demonstrate the power 
+            Founded in 2025, StyledShop began as a small project to demonstrate the power 
             of styled-components in React applications. Today, we've grown into a comprehensive 
             e-commerce platform featuring hundreds of products across multiple categories.
           </p>
@@ -83,7 +83,7 @@ export default function About() {
           <h2>Meet Our Team</h2>
           <TeamGrid>
             <TeamMember>
-              <h3>John Smith</h3>
+              <h3>Abduljabar Asaju</h3>
               <p>Founder & CEO</p>
               <p>10+ years experience in e-commerce</p>
             </TeamMember>
