@@ -5,7 +5,6 @@ import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
 const Nav = styled.nav`
-  ${({ theme }) => theme.cardBg};
   background: ${({ theme }) => theme.cardBg};
   padding: 1rem 2rem;
   display: flex;
@@ -14,18 +13,21 @@ const Nav = styled.nav`
   ${({ theme }) => theme.cardShadow};
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+  width: 100%;
 `;
 
 const Logo = styled.h2`
   margin: 0;
+  font-size: 1.5rem;
 `;
 
 const Links = styled.div`
   display: flex;
   gap: 2rem;
+
   @media (max-width: 768px) {
-    display: ${(props) => (props.isOpen ? 'flex' : 'none')};
+    display: ${(props) => (props.$isOpen ? 'flex' : 'none')};
     flex-direction: column;
     position: absolute;
     top: 70px;
@@ -46,6 +48,7 @@ const StyledLink = styled(NavLink)`
   @media (max-width: 768px) {
     padding: 0.5rem;
     width: 100%;
+    text-align: center;
   }
 `;
 
@@ -68,27 +71,33 @@ const Bar = styled.div`
   transition: 0.3s;
 `;
 
+const Controls = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
 export default function Header({ toggleTheme, isDark }) {
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <Nav isOpen={isOpen}>
+    <Nav>
       <Logo>🛍️ StyledShop</Logo>
-      <Links isOpen={isOpen}>
+      <Links $isOpen={isOpen}>
         <StyledLink to="/" onClick={() => window.innerWidth <= 768 && setIsOpen(false)}>Home</StyledLink>
         <StyledLink to="/products" onClick={() => window.innerWidth <= 768 && setIsOpen(false)}>Products</StyledLink>
         <StyledLink to="/about" onClick={() => window.innerWidth <= 768 && setIsOpen(false)}>About</StyledLink>
       </Links>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+      <Controls>
         <ThemeToggle toggleTheme={toggleTheme} isDark={isDark} />
         <MenuButton onClick={toggleMenu}>
           <Bar />
           <Bar />
           <Bar />
         </MenuButton>
-      </div>
+      </Controls>
     </Nav>
   );
 }

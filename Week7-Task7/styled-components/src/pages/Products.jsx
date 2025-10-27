@@ -25,8 +25,8 @@ const FilterBar = styled.div`
 `;
 
 const FilterButton = styled.button`
-  background: ${({ active, theme }) => (active ? theme.primary : theme.cardBg)};
-  color: ${({ active, theme }) => (active ? "#fff" : theme.text)};
+  background: ${({ $active, theme }) => ($active ? theme.primary : theme.cardBg)};
+  color: ${({ $active, theme }) => ($active ? "#fff" : theme.text)};
   border: 1px solid ${({ theme }) => theme.primary};
   border-radius: 8px;
   padding: 8px 16px;
@@ -56,7 +56,7 @@ export default function Products() {
         {categories.map((cat) => (
           <FilterButton
             key={cat}
-            active={selectedCategory === cat}
+            $active={selectedCategory === cat}
             onClick={() => setSelectedCategory(cat)}
           >
             {cat}

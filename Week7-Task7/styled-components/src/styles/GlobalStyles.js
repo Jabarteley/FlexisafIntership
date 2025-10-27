@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     font-family: 'Poppins', sans-serif;
     background-color: ${({ theme }) => theme.body};
@@ -21,6 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   a {

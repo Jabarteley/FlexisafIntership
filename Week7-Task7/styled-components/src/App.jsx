@@ -21,9 +21,11 @@ const Main = styled.main`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 80px; /* Add space for the sticky header */
   
   @media (max-width: 768px) {
     padding: 1rem;
+    padding-top: 60px; /* Adjust for mobile if header is taller */
   }
 `;
 
